@@ -211,7 +211,7 @@ export const commentsAPI = {
 
 // In your api.ts
 api.interceptors.request.use(config => {
-  const token = localStorage.getItem('temp_token') || getCookie('jwt');
+  const token = localStorage.getItem('temp_token')
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
