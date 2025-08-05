@@ -69,7 +69,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const login = () => {
     // Redirect to Google OAuth
     // authAPI.googleLogin();
-    window.location.href = 'http://localhost:3000/auth/google';
+    window.location.href = 'https://trendwisebackend-vbmx.onrender.com/auth/google';
+
+    // window.location.href = 'http://localhost:3000/auth/google';
+
+
+
   };
 
   const adminLogin = async (credentials: { email: string; password: string }): Promise<boolean> => {

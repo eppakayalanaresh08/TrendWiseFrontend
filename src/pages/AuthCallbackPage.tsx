@@ -44,7 +44,9 @@ const AuthCallbackPage: React.FC = () => {
     
         // 1. First verify the token
         const verifyResponse = await fetch(
-          `http://localhost:3000/auth/verify-token?token=${token}`,
+          `https://trendwisebackend-vbmx.onrender.com/auth/verify-token?token=${token}`,
+
+          // `http://localhost:3000/auth/verify-token?token=${token}`,
           {
             credentials: 'include',
             headers: {

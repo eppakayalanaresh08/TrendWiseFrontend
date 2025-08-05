@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // console.log(mockArticles)
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://trendwisebackend-vbmx.onrender.com';
 
 
 
@@ -196,11 +196,35 @@ export const commentsAPI = {
 };
 
 // Articles interaction API
+// export const interactionAPI = {
+//   // Like/unlike article
+//   likeArticle: async (slug: string) => {
+//     try {
+//       const response = await api.post(`/api/article/${slug}/like`);
+//       return response.data;
+//     } catch (error) {
+//       console.error('Error liking article:', error);
+//       throw error;
+//     }
+//   },
+// };
+
+// In your api.ts
+api.interceptors.request.use(config => {
+  const token = localStorage.getItem('temp_token') || getCookie('jwt');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+
+// services/api.ts
 export const interactionAPI = {
   // Like/unlike article
   likeArticle: async (slug: string) => {
     try {
-      const response = await api.post(`/api/article/${slug}/like`);
+      const response = await api.post(`/api/articles/${slug}/like`);
       return response.data;
     } catch (error) {
       console.error('Error liking article:', error);

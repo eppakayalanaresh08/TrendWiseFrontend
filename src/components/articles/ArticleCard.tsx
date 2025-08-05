@@ -56,7 +56,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, featured = false }) 
           
           <div className="flex items-center space-x-2 text-sm text-gray-500">
             <Heart className={`w-4 h-4 ${article.isLiked ? 'fill-red-500 text-red-500' : ''}`} />
-            <span>{article.likes}</span>
+            <span>{article.likes.length}</span>
           </div>
         </div>
       </div>
