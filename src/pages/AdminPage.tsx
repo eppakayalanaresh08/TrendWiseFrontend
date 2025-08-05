@@ -281,7 +281,9 @@ const AdminPage: React.FC = () => {
                 <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
                 <p className="text-gray-600 mt-1">Manage your content and monitor performance</p>
               </div>
-              <div className="flex space-x-3">
+
+
+              {/* <div className="flex space-x-3">
                 <button
                   onClick={handleGenerateArticle}
                   disabled={isGenerating}
@@ -297,7 +299,50 @@ const AdminPage: React.FC = () => {
                   <PlusCircle className="w-5 h-5" />
                   <span>New Article</span>
                 </button>
-              </div>
+              </div> */}
+
+
+
+              {/* <div className="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-3">
+  <button
+    onClick={handleGenerateArticle}
+    disabled={isGenerating}
+    className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+  >
+    <Bot className="w-5 h-5" />
+    <span>{isGenerating ? 'Generating...' : 'Generate Article'}</span>
+  </button>
+  <button 
+    onClick={() => setIsCreating(true)}
+    className="flex items-center justify-center space-x-2 bg-green-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg hover:bg-green-700 transition-colors duration-200"
+  >
+    <PlusCircle className="w-5 h-5" />
+    <span>New Article</span>
+  </button>
+</div> */}
+
+
+<div className="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-3">
+  <button
+    onClick={handleGenerateArticle}
+    disabled={isGenerating}
+    className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-3 py-2 text-sm md:px-6 md:py-3 md:text-base rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+  >
+    <Bot className="w-4 h-4 md:w-5 md:h-5" />
+    <span>{isGenerating ? 'Generating...' : 'Generate'}</span>
+  </button>
+  <button 
+    onClick={() => setIsCreating(true)}
+    className="flex items-center justify-center space-x-2 bg-green-600 text-white px-3 py-2 text-sm md:px-6 md:py-3 md:text-base rounded-lg hover:bg-green-700 transition-colors duration-200"
+  >
+    <PlusCircle className="w-4 h-4 md:w-5 md:h-5" />
+    <span>New</span>
+  </button>
+</div>
+
+
+
+
             </div>
           </div>
 
