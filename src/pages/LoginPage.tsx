@@ -20,7 +20,10 @@ const LoginPage: React.FC = () => {
   //   login();
   // };
   const handleGoogleLogin = () => {
-    localStorage.setItem('returnTo', location.state?.from?.pathname || '/');
+    // localStorage.setItem('returnTo', location.state?.from?.pathname || '/');
+    // login();
+    const returnPath = location.pathname + location.search;
+    localStorage.setItem('returnTo', returnPath);
     login();
   };
 

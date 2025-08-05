@@ -24,12 +24,13 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/article/:slug" element={<ArticlePage />} />
                 <Route path="/login" element={<LoginPage />} />
-                {/* <Route path="/auth/callback" element={<AuthCallbackPage />} /> */}
+            
                 <Route path="/auth-callback" element={<AuthCallbackPage />} />
                 <Route path="/admin/login" element={<AdminLoginPage />} />
                 <Route path="/admin" element={<AdminPage />} />
                 <Route path="/search" element={<SearchResults />} />
               </Routes>
+              
             </main>
             <Footer />
           </div>
@@ -40,3 +41,7 @@ function App() {
 }
 
 export default App;
+
+
+
+    {/* <Route path="/auth/callback" element={<AuthCallbackPage />} /> */}

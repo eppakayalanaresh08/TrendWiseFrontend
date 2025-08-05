@@ -5,6 +5,7 @@ import axios from 'axios';
 // console.log(mockArticles)
 
 const API_BASE_URL = 'https://trendwisebackend-vbmx.onrender.com';
+// const API_BASE_URL = 'http://localhost:3000';
 
 
 

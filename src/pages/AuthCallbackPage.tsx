@@ -16,7 +16,7 @@ const AuthCallbackPage: React.FC = () => {
     const handleAuthCallback = async () => {
       try {
         const token = searchParams.get('token');
-        console.log(token,'AuthContext.tsx')
+        console.log(token,'searchParams')
 
 
            if (token) {
