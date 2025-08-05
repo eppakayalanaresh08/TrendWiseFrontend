@@ -4,8 +4,10 @@ Welcome to the frontend of **TrendWise**, a MERN stack-based platform that scrap
 
 ---
 
-![Homepage](screenshots/homepage.png)
-
+![Homepage](/src/assets/HomePage.png)
+![Usersignin](/src/assets/usersignIn.png)
+![AdminLogin](/src/assets/adminlogin.png)
+![AdminDashboard](/src/assets/admindashboard.png)
 
 ## 🔗 Live Demo
 
