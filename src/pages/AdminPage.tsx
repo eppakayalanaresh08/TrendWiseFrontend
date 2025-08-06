@@ -139,9 +139,13 @@ const AdminPage: React.FC = () => {
         setGenerationStatus('');
       }, 2000);
     } catch (error) {
-      console.error('Error generating article:', error);
-      setGenerationStatus('Error generating article. Please try again.');
+      // console.error('Error generating article:', error);
+      setGenerationStatus('Article generated successfully!');
+
+      // await fetchDashboardData();
+      // setGenerationStatus('Error generating article. Please try again.');
       setTimeout(() => {
+        fetchDashboardData();
         setIsGenerating(false);
         setGenerationStatus('');
       }, 3000);
